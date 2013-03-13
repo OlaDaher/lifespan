@@ -11,3 +11,24 @@
  *= require_self
  *= require_tree .
  */
+h1 {font-size:210%;margin-top:0px;font-weight:normal}
+h2 {font-size:180%;margin-top:10px;margin-bottom:10px;font-weight:normal}
+h3 {font-size:120%;font-weight:normal}
+h4 {font-size:100%;}
+h5 {font-size:90%;}
+h6 {font-size:80%;}
+
+h1,h2,h3,h4,h5,h6{
+background-color:transparent;
+color:#000000;
+}
+body,p,h1,h2,h3,h4,table,td,th,ul,ol,textarea,input{
+font-family:verdana,helvetica,arial,sans-serif;
+}
+
+#header {
+	margin: 0 auto;
+	background:red;
+	height: 40px;
+	color: red;
+}

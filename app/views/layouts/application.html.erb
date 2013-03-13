@@ -2,58 +2,22 @@
 <html>
 <head>
    <title><%= full_title %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag   :all, "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-	<header class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
+<div id="header">
+</div>
+<div
+<img id="logo" src="logo.jpeg"/>
+
           <h4>LifeSpan Plus</h4>
-          <nav>
-            <ul class="nav pull-right">
-              <li><%= link_to "Home",    root_path %></li>
-              <li><%= link_to "About Us",   about_path %></li>
-              <li><%= link_to "Contact Us", contact_path %></li>
-              <li><%= link_to "Privacy Policy", privacy_path %></li>
-	 		  <% if current_donor %>
-              <% if can? :index, @donor %>   
-                <%= link_to "Donor List", donors_path, class: "btn btn-large btn-primary" %> 
-              <% end %>
-              
-              <% if can? :new, @organization %>
-                <%= link_to "Register Hospital", register_path, class: "btn btn-large btn-primary" %>
-              <% end %>
+   <div>
+<div>
+</div>
 
-              <% if can? :new, @medic %>
-                <%= link_to "Register Hospital Admin", join_path, class: "btn btn-large btn-primary" %>
-              <% end %>
-
-              
-                <%= link_to "Available Hospitals", organizations_path, class: "btn btn-large btn-primary" %>
-              
-                
-                <%= link_to "Log out", logout_path, class: "btn btn-large btn-primary" %> 
-              
-        <% elsif current_medic %>
-              <%= link_to "Doctor List", medics_path, class: "btn btn-large btn-primary" %> 
-              <%= link_to "Register Hospital Staff", join_path, class: "btn btn-large btn-primary" %>
-              <%= link_to "Log out", signout_path, class: "btn btn-large btn-primary" %> 
-
-        <% else %>
-              
-                
-                <%= link_to "Donate Now!", login_path, class: "btn btn-large btn-primary" %>
-                <%= link_to "Send Blood Request!", signin_path, class: "btn btn-large btn-primary" %>
-                 
-              
-              <% end %>	
-	 		</ul>  
-          </nav>
-        </div>
-      </div>
-    </header> 
+<div id="header">
+</div>
 
 <%= yield %>
 

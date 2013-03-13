@@ -1,2 +1,52 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<body>
+
+            <ul class="nav pull-right">
+	 		  <% if current_donor %>
+              <% if can? :index, @donor %>   
+                <%= link_to "Donor List", donors_path, class: "btn btn-large btn-primary" %> 
+              <% end %>
+              
+              <% if can? :new, @organization %>
+                <%= link_to "Register Hospital", register_path, class: "btn btn-large btn-primary" %>
+              <% end %>
+
+              <% if can? :new, @medic %>
+                <%= link_to "Register Hospital Admin", join_path, class: "btn btn-large btn-primary" %>
+              <% end %>
+
+              
+                <%= link_to "Available Hospitals", organizations_path, class: "btn btn-large btn-primary" %>
+              
+                
+                <%= link_to "Log out", logout_path, class: "btn btn-large btn-primary" %> 
+              
+        <% elsif current_medic %>
+              <%= link_to "Doctor List", medics_path, class: "btn btn-large btn-primary" %> 
+              <%= link_to "Register Hospital Staff", join_path, class: "btn btn-large btn-primary" %>
+              <%= link_to "Log out", signout_path, class: "btn btn-large btn-primary" %> 
+
+        <% else %>
+              
+                
+                <%= link_to "Donate Now!", login_path, class: "btn btn-large btn-primary" %>
+                <%= link_to "Send Blood Request!", signin_path, class: "btn btn-large btn-primary" %>
+                 
+              
+              <% end %>
+	 		</ul>  
+          </nav>
+
+	<div id="nav">
+		<ul>
+			<li class="topline">
+			<a href="/about">How LifeSpan+ Works?</a></li>
+			<li><a href="/contact">Contact</a></li>
+			<li><a href="/privacy">Privacy</a></li>
+			<li><a href="#">Photo Gallery</a></li>	
+	        <li><a href="#">Contact</a></li>		
+		</ul>
+	</div>
+        </div>
+      </div>
+    </header>

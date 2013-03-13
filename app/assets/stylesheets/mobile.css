@@ -1,0 +1,78 @@
+.container {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#banner, #nav {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+
+img#logo {
+	width: 20%;
+	margin-top: 10px;
+}
+
+
+#nav ul {
+	width: 100%;
+	padding: 0;
+	margin: 10px 0 0 0 ;
+}
+	
+#nav li {
+	width: 100%;
+	margin: 0;
+	font-size: 30pt;
+}
+
+#nav a {
+	line-height: 2em;
+	width: auto;
+	float: none;
+	margin: 0;
+	padding:0 20px 0 20px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: red;
+	background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(158,158,158)),
+    color-stop(0.50, rgb(212,212,212)),
+    color-stop(0.75, rgb(235,235,235))
+	);
+	background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(158,158,158) 0%,
+    rgb(212,212,212) 50%,
+    rgb(235,235,235) 75%
+	);
+}
+
+#nav a:hover, #nav a:focus {
+text-decoration: none;
+}
+
+li.topline a {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #666;
+}
+
+h1 {
+	font-size: 12pt;
+}
+
+p {
+	font-size: 11pt;
+	line-height: 15pt;
+}
+
+
